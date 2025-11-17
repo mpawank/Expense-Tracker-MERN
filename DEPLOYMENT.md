@@ -36,25 +36,48 @@ git push origin main
 
 ### Step 3: Create a New Web Service on Render
 
+#### Option A: Using render.yaml (Recommended - Easiest)
+
+1. Go to [Render Dashboard](https://dashboard.render.com/)
+2. Click **"New +"** → **"Blueprint"**
+3. Connect your Git repository
+4. Select your repository: `mpawank/Expense-Tracker-MERN`
+5. Render will automatically detect `render.yaml` in your repo
+6. Click **"Apply"** to create the service with the correct configuration
+7. You'll still need to add environment variables manually (next step)
+
+#### Option B: Manual Configuration
+
 1. Go to [Render Dashboard](https://dashboard.render.com/)
 2. Click **"New +"** → **"Web Service"**
 3. Connect your Git repository
 4. Select your repository and branch (usually `main`)
 
-### Step 4: Configure the Web Service
+### Step 4: Configure the Web Service (Manual Setup Only)
+
+**If you used Blueprint (Option A), skip to Step 5.**
 
 Fill in the following settings:
 
 - **Name**: `expense-tracker-backend` (or your preferred name)
 - **Region**: Choose closest to your users
 - **Branch**: `main`
-- **Root Directory**: `backend` ⚠️ **CRITICAL: Must be set to `backend`**
+- **Root Directory**: `backend` ⚠️ **CRITICAL: Type exactly `backend` (no slashes)**
 - **Runtime**: `Node`
 - **Build Command**: `npm install`
 - **Start Command**: `npm start`
 - **Instance Type**: Free (or paid for better performance)
 
 **IMPORTANT**: The Root Directory MUST be set to `backend` otherwise Render will look for package.json in the wrong location and fail with "ENOENT: no such file or directory" error.
+
+**If you already created a service and it's failing:**
+
+1. Go to your service → **Settings** tab
+2. Scroll to **Build & Deploy** section
+3. Find **Root Directory** field
+4. Enter: `backend` (exactly, no slashes)
+5. Click **Save Changes**
+6. Go to **Manual Deploy** → **Deploy latest commit**
 
 ### Step 5: Add Environment Variables
 
