@@ -1,0 +1,317 @@
+.filterRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.filterRow:hover {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.data-table {
+    border-collapse: collapse;
+  }
+  
+.data-table thead th {
+    background-color: #f5f5f5;
+}
+
+.icons-handle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    /* width: 100%; */
+}
+
+.date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.date .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.date label {
+    font-weight: 500;
+    color: white;
+}
+
+.date .react-datepicker-wrapper {
+    width: 100%;
+}
+
+.date .react-datepicker__input-container input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: white;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.date .react-datepicker__input-container input:focus {
+    outline: none;
+    border-color: #667eea;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+  
+/* .data-table tbody tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+  
+.data-table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+} */
+
+.containerBtn{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.containerBtn button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    font-weight: 600;
+}
+
+.containerBtn button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.addNew {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    padding: 10px 25px !important;
+    border-radius: 25px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+    font-weight: 600 !important;
+}
+
+.addNew:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+}
+
+.mobileBtn{
+    display: none !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 24px !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.mobileBtn:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+}
+
+.iconBtnBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.iconBtnBox:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.iconActive{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
+}
+
+.iconActive:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.6);
+}
+
+.iconDeactive{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.iconDeactive:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Modal improvements */
+.modal-content {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-title {
+    color: white;
+    font-weight: 600;
+}
+
+.modal-body .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.modal-body .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    color: white;
+}
+
+.modal-body .form-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.modal-body .form-select:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    color: white;
+}
+
+.modal-body .form-select option {
+    background: #2c2c2c;
+    color: white;
+}
+
+.modal-body .form-label {
+    color: white;
+    font-weight: 500;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-footer .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.modal-footer .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.modal-footer .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+@media only screen and (max-width: 600px) {
+    .filterRow {
+        padding: 15px !important;
+        margin-top: 0px !important;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .addNew{
+        display: none !important;
+    }
+    .mobileBtn{
+        display: inline-block !important;
+    }
+    .iconBtnBox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0px;
+        width: 100%;
+    }
+    
+    .date{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .date .form-group{
+        width: 100%;
+    }
+
+    .containerBtn{
+        margin-left: 0px !important;
+    }
+}

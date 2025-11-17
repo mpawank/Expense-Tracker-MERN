@@ -1,0 +1,101 @@
+.lnk{
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.lnk:hover{
+    color: #ffcc00 !important;
+    text-decoration: underline;
+}
+
+.btnStyle{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    min-width: 150px;
+}
+
+.btnStyle:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.btnStyle:active{
+    transform: translateY(0);
+}
+
+.btnStyle:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Form styling improvements */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    color: white;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-select {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: #667eea;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    color: white;
+}
+
+.form-select option {
+    background: #2c2c2c;
+    color: white;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: white;
+}
+
+/* Container animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mt-5 {
+    animation: fadeInUp 0.6s ease-out;
+}
