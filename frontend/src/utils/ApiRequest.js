@@ -6,7 +6,7 @@ const isDevelopment = window.location.hostname === 'localhost' ||
 
 const host = isDevelopment 
   ? "http://localhost:5000"
-  : "https://expense-tracker-app-knl1.onrender.com";
+  : process.env.REACT_APP_BACKEND_URL || "https://expense-tracker-app-knl1.onrender.com";
 
 export const setAvatarAPI = `${host}/api/auth/setAvatar`;
 export const registerAPI = `${host}/api/auth/register`;
