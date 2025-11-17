@@ -46,11 +46,13 @@ Fill in the following settings:
 - **Name**: `expense-tracker-backend` (or your preferred name)
 - **Region**: Choose closest to your users
 - **Branch**: `main`
-- **Root Directory**: `backend`
+- **Root Directory**: `backend` ⚠️ **CRITICAL: Must be set to `backend`**
 - **Runtime**: `Node`
 - **Build Command**: `npm install`
 - **Start Command**: `npm start`
 - **Instance Type**: Free (or paid for better performance)
+
+**IMPORTANT**: The Root Directory MUST be set to `backend` otherwise Render will look for package.json in the wrong location and fail with "ENOENT: no such file or directory" error.
 
 ### Step 5: Add Environment Variables
 
@@ -192,16 +194,25 @@ Every push to your main branch will trigger a new deployment.
 
 ### Backend Issues
 
-1. **Database connection fails**:
+1. **Build fails with "ENOENT: no such file or directory, open package.json"**:
+   - ✅ **Solution**: Go to Render Dashboard → Your Service → Settings → Root Directory
+   - Set Root Directory to `backend` (not empty, not `/`, just `backend`)
+   - Click "Save Changes" and manually redeploy
+   - This is the most common deployment error!
+
+2. **Database connection fails**:
    - Verify `MONGO_URL` in Render environment variables
    - Check MongoDB Atlas network access (allow all IPs: `0.0.0.0/0`)
+   - Ensure MONGO_URL is properly formatted with username and password
 
-2. **Build fails on Render**:
+3. **Build fails on Render**:
    - Check build logs in Render dashboard
    - Ensure all dependencies are in `package.json`
+   - Verify Node.js version compatibility
 
-3. **Backend sleeps (Free tier)**:
+4. **Backend sleeps (Free tier)**:
    - Render free tier sleeps after 15 minutes of inactivity
+   - Cold starts can take 30-60 seconds
    - Consider upgrading or using a cron job to ping your endpoint
 
 ### Frontend Issues
